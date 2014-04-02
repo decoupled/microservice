@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+TEMPLATE=$(dirname $0)
+NAME=$1
+
+if [ -z "$NAME" ]; then
+	echo Missing NAME
+	exit 1
+fi
+
+mkdir $NAME
+cp $TEMPLATE/src/* $NAME/
+
+cat >$NAME/.totally <<HERE
+NAME="$NAME"
+BUILD_DIR="."
+IMAGE="$NAME:latest"
+CONTAINER="$NAME"
+HERE
