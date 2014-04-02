@@ -14,5 +14,5 @@ cat >$NAME/.totally <<HERE
 NAME="$NAME"
 BUILD_DIR="."
 IMAGE="$NAME:latest"
-CONTAINER="$NAME"
+CONTAINER="$USERs-$NAME"
 HERE
