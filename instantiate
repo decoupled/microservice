@@ -13,6 +13,6 @@ cp $TEMPLATE/src/* $NAME/
 cat >$NAME/.totally <<HERE
 NAME="$NAME"
 BUILD_DIR="."
-IMAGE="\$NAME:latest"
-CONTAINER="\$USERs-$NAME"
+IMAGE="\${NAME}:latest"
+CONTAINER="\${USER}s-\${NAME}"
 HERE
